@@ -74,3 +74,31 @@ try:
     print(num**2)
 except NameError:  # NameError为异常类型，
     print("输入不是整数！")
+
+# 实例5，身体质量指数BMI=体重（kg)/身高^2（m^2)
+# 如果BMI<18.5,则偏瘦；
+# 18.5<BMI<24，则正常；
+# 24<BMI<28，则偏胖；
+# 如果BMI≥28,则肥胖；
+# 双输入、双输出
+
+
+height, weight = eval(input("请输入升高（m）体重（kg），请使用逗号（英文）隔开。"))
+BMI = weight/pow(height, 2)
+print("这人的BMI指数位{:.2f}". format(BMI))
+# format前面使用.而不是，需要注意
+who, nat = "", ""
+if BMI < 18.5:
+    who, nat = "偏瘦", "偏瘦"
+elif 18.5 <= BMI < 24:
+    who, nat = "正常", "正常"
+elif 24 <= BMI < 25:
+    who, nat = "正常", "偏胖"
+elif 25 <= BMI < 28:
+    who, nat = "偏胖", "偏胖"
+elif 28 <= BMI < 30:
+    who, nat = "偏胖", "肥胖"
+else:
+    who, nat = "肥胖", "肥胖"
+print("BMI的国际、国内指标评价结果分别为：{0},{1}". format(who, nat))
+# format前面使用.而不是，需要注意
