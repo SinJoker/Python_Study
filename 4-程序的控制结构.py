@@ -67,7 +67,7 @@ else:
 
 # （4）程序异常处理
 num = eval(input("请输入一个整数："))
-print(num**2)
+print(num*2)
 # 异常处理的地方在于，如果用户没有输入整数，怎么处理
 try:
     num = eval(input("请输入一个整数："))
